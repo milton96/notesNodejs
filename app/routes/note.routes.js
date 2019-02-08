@@ -5,7 +5,10 @@ module.exports = (app) => {
     app.post('/notes', notes.create);
 
     // Retrieve all Notes
-    app.get('/notes', notes.findAll);
+    //app.get('/notes', notes.findAll);
+
+    // Regresa el último registro
+    app.get('/notes', notes.findLast);
 
     // Retrieve a single Note with noteId
     app.get('/notes/:noteId', notes.findOne);
